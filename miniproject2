@@ -1,0 +1,49 @@
+# Student Report Card 
+
+# Function to calculate grade
+def calculate_grade(avg):
+    if avg >= 90:
+        return "A+"
+    elif avg >= 75:
+        return "A"
+    elif avg >= 60:
+        return "B"
+    elif avg >= 50:
+        return "C"
+    else:
+        return "Fail"
+
+
+# Function to create report card
+def create_report():
+    name = input("Enter student name: ")
+
+    print("Enter marks for 3 subjects:")
+    sub1 = float(input("Subject 1: "))
+    sub2 = float(input("Subject 2: "))
+    sub3 = float(input("Subject 3: "))
+
+    # Store in dictionary
+    student = {
+        "name": name,
+        "marks": [sub1, sub2, sub3]
+    }
+
+    # Calculate total and average
+    total = sum(student["marks"])
+    average = total / 3
+
+    grade = calculate_grade(average)
+
+    # Print formatted report card
+    print("\n===== 📄 REPORT CARD =====")
+    print(f"Name      : {student['name']}")
+    print(f"Marks     : {student['marks']}")
+    print(f"Total     : {total}")
+    print(f"Average   : {average:.2f}")
+    print(f"Grade     : {grade}")
+    print("=========================\n")
+
+
+# Run program
+create_report()
