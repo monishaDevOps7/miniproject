@@ -1,0 +1,32 @@
+def string_formatter():
+    print("====  String Formatter Tool ====")
+    
+    # Input
+    name = input("Enter your name: ")
+    product = input("Enter product name: ")
+
+    # Formatted sentence
+    sentence = "{} has successfully purchased a {}.".format(name, product)
+    print("\n Formatted Sentence:")
+    print(sentence)
+
+    # Padding width
+    width = 30
+
+    print("\n Padded Output (Width = 30):")
+
+    # Left align
+    print("\n Left Aligned:")
+    print("{:<30}".format(name))
+
+    # Right align
+    print("\n Right Aligned:")
+    print("{:>30}".format(name))
+
+    # Center align
+    print("\n
+    Center Aligned:")
+    print("{:^30}".format(name))
+
+# Run function
+string_formatter()
