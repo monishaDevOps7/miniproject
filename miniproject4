@@ -1,0 +1,26 @@
+# Store users (username: password)
+users = {
+    "admin": "admin123",
+    "john": "john@123",
+    "monisha": "pass456"
+}
+
+# Function to validate login
+def login():
+    print("====  Login System ====")
+    
+    username = input("Enter Username: ")
+    password = input("Enter Password: ")
+
+    # Check if username exists
+    if username in users:
+        # Check if password matches
+        if users[username] == password:
+            print(" Login Successful! Welcome,", username)
+        else:
+            print(" Incorrect Password!")
+    else:
+        print(" Username not found!")
+
+# Run the login function
+login()
