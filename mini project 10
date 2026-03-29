@@ -1,0 +1,25 @@
+def convert_number(num):
+    print("\n Number Conversions:")
+    print("Binary :", bin(num))
+    print("Octal  :", oct(num))
+    print("Hex    :", hex(num))
+
+def format_number(num):
+    print("\n Formatted Number:")
+    print("With commas:", "{:,}".format(num))
+
+def scientific_notation(num):
+    print("\n Scientific Notation:")
+    print("Scientific:", "{:.2e}".format(num))
+
+def number_utility():
+    print("====  Number Utility Tool ====")
+    
+    num = int(input("Enter a number: "))
+
+    convert_number(num)
+    format_number(num)
+    scientific_notation(num)
+
+# Run program
+number_utility()
