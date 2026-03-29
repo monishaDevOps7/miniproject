@@ -1,1 +1,50 @@
+# Dictionary to store candidates and their votes
+votes = {
+    "Alice": 0,
+    "Bob": 0,
+    "Charlie": 0
+}
 
+# Function to add vote
+def add_vote():
+    print("\nCandidates:", list(votes.keys()))
+    choice = input("Enter candidate name to vote: ")
+
+    if choice in votes:
+        votes[choice] += 1
+        print(f" Vote added to {choice}")
+    else:
+        print(" Invalid candidate!")
+
+# Function to display results
+def show_results():
+    print("\n Voting Results:")
+    for candidate, count in votes.items():
+        print(f"{candidate}: {count} votes")
+
+# Function to find winner
+def show_winner():
+    winner = max(votes, key=votes.get)
+    print(f"\n Winner is {winner} with {votes[winner]} votes!")
+
+# Menu system
+while True:
+    print("\n====  Voting System ====")
+    print("1. Add Vote")
+    print("2. Show Results")
+    print("3. Show Winner")
+    print("4. Exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        add_vote()
+    elif choice == "2":
+        show_results()
+    elif choice == "3":
+        show_winner()
+    elif choice == "4":
+        print(" Exiting...")
+        break
+    else:
+        print(" Invalid choice!")
